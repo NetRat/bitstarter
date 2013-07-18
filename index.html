@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>My First Bitstarter></title>
+    <title>Footmades</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fbootstrap-combined.no-icons.min.css">
     <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/3.0.2/css/font-awesome.css">
@@ -16,7 +16,7 @@
       /* Large desktop */
       @media (min-width: 980px) {
         body {
-          padding-top: 60px;
+          padding-top: 30px;
         }
         .linediv-l {
           border-right: 1px white solid;
@@ -77,6 +77,15 @@
         color: white;
       }
 
+      /* Custom container */
+      .container-narrow {
+        margin: 0 auto;
+        max-width: 1200px;
+      }
+      .container-narrow > hr {
+        margin: 30px 0;
+      }
+
       /* Marketing Copy and Footer */
       .copy {
         padding-top: 2.5%;
@@ -96,54 +105,66 @@
       .footer a {
         color: #ccccff;
       }
+
+      /* Main marketing message and sign up button */
+      .jumbotron {
+        margin: 60px 0;
+        text-align: center;
+      }
+      .jumbotron h1 {
+        font-size: 72px;
+        line-height: 1;
+      }
+      .jumbotron .btn {
+        font-size: 21px;
+        padding: 14px 24px;
+      }
     </style>
   </head>
   <body>
+    <div class="container-narrow">
+      <div class="row-fluid pitch">
 
-    <!-- Mobile-friendly navbar adapted from example. -->
-    <!-- http://twitter.github.io/bootstrap/examples/starter-template.html -->
-    <div class="navbar navbar-inverse navbar-fixed-top">
-      <div class="navbar-inner">
-	<div class="container">
-	  <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-	    <span class="icon-bar"></span>
-	    <span class="icon-bar"></span>
-	    <span class="icon-bar"></span>
-	  </button>
-	  <a class="brand" href="#">Bitstarter</a>
-	  <div class="nav-collapse collapse">
-	    <ul class="nav">
-	      <li class="active"><a href="#">Home</a></li>
-	      <li><a href="#about">About</a></li>
-	      <li><a href="#contact">Contact</a></li>
-	    </ul>
-	  </div><!--/.nav-collapse -->
+      <!-- Mobile-friendly navbar adapted from example. -->
+      <!-- http://twitter.github.io/bootstrap/examples/starter-template.html -->
+
+      <div class="masthead">
+        <ul class="nav nav-pills pull-right">
+          <li class="active"><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+	</ul>
+	<h3 class="muted">Footmades</h3>
+      </div>
+      <hr>
+      <div class="jumbotron">
+        <h1>What about footmades?</h1>
+        <p class="lead">Most of us value handmade presents, but what about footmade one?<br>It is fun and it is as easy as 'One, two, three'. You can do it together with your friends as well.</p>
+	<div class="row pitch">
+	  <div class="span4">
+	    <h2>Step 1</h2>
+	    <p>Start the app on your mobile device.</p>
+	  </div>  
+	  <div class="span4">
+	    <h2>Step 2</h2>
+	    <p>Track the route at some place.</p>
+	  </div>  
+	  <div class="span4">
+	    <h2>Step 3</h2>
+	    <p>Store it and share with your friends.</p>
+	  </div>  
 	</div>
       </div>
+      <hr>
     </div>
 
     <!-- We use row-fluid inside containers to achieve a resizable layout. -->
     <!-- blogs.endjin.com/2013/04/tips-for-implementing-responsive-designs-using-bootstrap/ -->
     <!-- http://stackoverflow.com/a/12270322 -->
-    <div class="container">
-      <!-- Font and paired font .heading/.subheading and body from Google Fonts -->
-      <!-- www.google.com/fonts/specimen/Ubuntu -->
-      <!-- www.google.com/fonts/specimen/Ubuntu#pairings -->
-      <div class="row-fluid heading">
-	<div class="span12">
-	  <h1>Product</h1>
-	</div>
-      </div>
-      <div class="row-fluid subheading">
-	<div class="span12">
-	  <!-- Special typography from Bootstrap for lead paragraph. -->
-	  <!-- http://twitter.github.io/bootstrap/base-css.html#typography -->
-	  <p class="lead">One sentense description.</p>
-	</div>  
-      </div>
-      <div class="row-fluid pitch">
+    <div class="container-narrow">
+      <div class="row-fluid">
 	<div class="span5 offset1 video">
-	  <img class="img-polaroid" src="http://placehold.it/480x300">
+	  <img class="img-polaroid" src="http://i.imgur.com/a5leHRhl.jpg?1">
 	</div>
 
 	<!-- We define a new 'actions' div to contain statistics, order, and share buttons. -->
@@ -153,17 +174,17 @@
 	      <div class="span4">
 		<!-- linediv-l and linediv-r give dividing lines that look different in horizontal and vertical layouts, illustrating media queries. -->
 		<div class="linediv-l">
-		  <h3>1000</h3> <p>backers</p>
+		  <h3>1</h3> <p>backers</p>
 		</div>
 	      </div>
 	      <div class="span4">
 		<div class="linediv-c">
-		  <h3>$6000</h3> <p>of 10,000</p>
+		  <h3>$20</h3> <p>of 20,000</p>
 		</div>
 	      </div>
 	      <div class="span4">
 		<div class="linediv-r">
-		  <h3>10</h3> <p>days left</p>
+		  <h3>100</h3> <p>days left</p>
 		</div>
 	      </div>
 	    </div>
@@ -172,8 +193,8 @@
 	    <!-- Bootstrap progress bar -->
 	    <!-- http://twitter.github.io/bootstrap/components.html#progress -->
 	    <div class="thermometer progress active">
-	      <div class="bar bar-success" style="width: 60%;"></div>
-	      <div class="bar bar-warning" style="width: 40%;"></div>
+	      <div class="bar bar-success" style="width: 1%;"></div>
+	      <div class="bar bar-warning" style="width: 99%;"></div>
 	    </div>
 	  </div>
 	  <div class="span6 offset3 order">
@@ -195,25 +216,25 @@
       <!-- http://twitter.github.io/bootstrap/base-css.html#images -->
       <!-- http://placehold.it -->
       <div class="row-fluid section1">
-	<div class="span5 offset1 asset">
-	  <img class="img-polaroid" src="http://placehold.it/480x300">
-	</div>
-	<div class="span5 copy">
-	  <p>
-	    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam quis vestibulum lorem. In quis rutrum libero. Nullam at porta ligula. Duis dui nisl, ultrices quis vestibulum vitae, placerat eget arcu. Phasellus sit amet feugiat magna. Aenean suscipit nulla et risus facilisis, ut laoreet nulla ullamcorper. Aenean vulputate arcu tortor, egestas convallis sapien facilisis vitae. Sed sagittis mi nec commodo cursus. Donec vel ultricies enim, ac eleifend dui.
-	  </p>
-	</div>
-      </div>
-
-      <div class="row-fluid section2">
 	<div class="span5 offset1 copy copy-right">
 	  <p>
-	    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam quis vestibulum lorem. In quis rutrum libero. Nullam at porta ligula. Duis dui nisl, ultrices quis vestibulum vitae, placerat eget arcu. Phasellus sit amet feugiat magna. Aenean suscipit nulla et risus facilisis, ut laoreet nulla ullamcorper. Aenean vulputate arcu tortor, egestas convallis sapien facilisis vitae. Sed sagittis mi nec commodo cursus. Donec vel ultricies enim, ac eleifend dui.
+	    Do you remember your childhood? The time when you're leaving your tracks in the snow making writings or some figures or marking the traces on the sand? Unfortunately all those footprints can't remain forever. However things changed in 21th century and it's quite the time to introduce our service.
 	  </p>
 	</div>
         <div class="span5 asset">
-  	  <img class="img-polaroid" src="http://placehold.it/480x300">
+  	  <img class="img-polaroid" src="http://i.imgur.com/BpDIsXel.jpg?1">
         </div>
+      </div>
+
+      <div class="row-fluid section2">
+	<div class="span5 offset1 asset">
+	  <img class="img-polaroid" src="http://i.imgur.com/e3PiWck.jpg?3">
+	</div>
+	<div class="span5 copy">
+	  <p>
+	    Now you can make all this stuff, including love letters, birthday wishes, anything fun or crazy one can imagine by your own foot and save your masterpiece for ages. Note that you must walk all the way out in the place you choose and here is one more advantage of our service! Just imagine you can leave the message to the person tracked down on Red Square or Sahara desert?
+	  </p>
+	</div>
       </div>
 
     <!-- For the FAQ, we introduce a little bit of JS, using the accordion. -->
@@ -238,12 +259,12 @@
 	  <div class="accordion-group">
 	    <div class="accordion-heading">
 	      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">
-		What's a Frequently Asked Questions?
+		What's the snow?
 	      </a>
 	    </div>
 	    <div id="collapseTwo" class="accordion-body collapse">
 	      <div class="accordion-inner">
-		A question which is commonly asked by users.
+		Snow is precipitation in the form of flakes of crystalline water ice that fall from clouds. Since snow is composed of small ice particles, it is a granular material. It has an open and therefore soft structure, unless subjected to external pressure. Snowflakes come in a variety of sizes and shapes. Types that fall in the form of a ball due to melting and refreezing, rather than a flake, are known as hail, ice pellets or snow grains.
 	      </div>
 	    </div>
 	  </div>
@@ -259,5 +280,7 @@
 	<p>This work is licensed under the <a href="http://creativecommons.org/licenses/by-sa/3.0/">CC By-SA 3.0</a>, without all the cruft that would otherwise be put at the bottom of the page.</p>
       </div>
     </div>  
+
+
   </body>
 </html>
